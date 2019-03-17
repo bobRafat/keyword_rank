@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  infotrack.keywordrank:
+    image: ${DOCKER_REGISTRY}infotrackkeywordrank
+    build:
+      context: .
+      dockerfile: InfoTrack.KeywordRank/Dockerfile

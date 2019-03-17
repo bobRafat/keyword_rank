@@ -1,0 +1,14 @@
+@model ResultViewModel
+@{
+  ViewData["Title"] = "Result";
+}
+
+<h1>
+ Search Result
+</h1>
+
+<div>
+  <p>
+    There are <b> @Model.Occurence</b> occurence(s) of <i>@Model.Url</i> when searching for <u>"@Model.Keyword"</u> 
+  </p>
+</div>

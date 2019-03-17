@@ -1,0 +1,26 @@
+﻿@model KeywordSearchModel
+@{
+  ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h1 class="display-4">Keyword Search</h1>
+    <form method="post">
+      <div asp-validation-summary="ModelOnly"></div>
+      <fieldset>
+        <div class="form-group">
+          <label asp-for="Keyword">Keyword</label>
+          <input asp-for="Keyword" class="form-control" placeholder="Enter keyword">
+          <span class="text-danger" asp-validation-for="Keyword"></span>
+          <small id="keywordHelp" class="form-text text-muted">Enter the keyword you want to search for.</small>
+        </div>
+        <div class="form-group">
+          <label asp-for="Url">Url</label>
+          <input asp-for="Url" class="form-control" placeholder="Enter url">
+          <span class="text-danger" asp-validation-for="Url"></span>
+          <small id="urlHelp" class="form-text text-muted">Enter the url to find the occurences.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </fieldset>
+    </form>
+</div>

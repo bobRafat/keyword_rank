@@ -60,10 +60,7 @@ namespace InfoTrack.KeywordRank.Services
             {
                 searchResult = Regex.Replace(searchResult, "<script.*?</script>", "", RegexOptions.Singleline | RegexOptions.IgnoreCase);
             }
-            //while (Regex.Match(searchResult, "<span.*?</span>").Success)
-            //{
-            //    searchResult = Regex.Replace(searchResult, "<span.*?</span>", "", RegexOptions.Singleline | RegexOptions.IgnoreCase);
-            //}
+           
             while (Regex.Match(searchResult, @"<input(\s+[^>]*)?>").Success)
             {
                 searchResult = Regex.Replace(searchResult, @"<input(\s+[^>]*)?>", "", RegexOptions.Singleline | RegexOptions.IgnoreCase);

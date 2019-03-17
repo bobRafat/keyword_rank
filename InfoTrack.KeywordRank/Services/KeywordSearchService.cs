@@ -43,7 +43,7 @@ namespace InfoTrack.KeywordRank.Services
             }
             catch (Exception ex)
             {
-                throw new IOException("An error occured while fetching data from google", ex);
+                throw new IOException("There are some problems while trying to fetch the result from google. It's either you are banned by google or google service is not responsive at the moment.", ex);
             }
 
             _logger.LogInformation(searchResult);

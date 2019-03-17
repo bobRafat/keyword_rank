@@ -6,7 +6,7 @@ EXPOSE 44381
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY InfoTrack.KeywordRank/InfoTrack.KeywordRank.csproj InfoTrack.KeywordRank/
-COPY C:\Users\Babak\Documents\Source control\infotrack\InfoTrack.KeywordRank\nuget.config InfoTrack.KeywordRank/
+COPY InfoTrack.KeywordRank/nuget.config InfoTrack.KeywordRank/
 RUN dotnet restore InfoTrack.KeywordRank/InfoTrack.KeywordRank.csproj
 COPY . .
 WORKDIR /src/InfoTrack.KeywordRank
